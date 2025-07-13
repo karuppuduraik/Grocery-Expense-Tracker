@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Grocery Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🛒 Grocery Expense Tracker</h1>
+
+    <form id="expenseForm">
+      <input type="text" id="itemName" placeholder="Item Name" required>
+      <input type="number" id="itemQty" placeholder="Quantity" required>
+      <input type="number" id="itemCost" placeholder="Cost (₹)" required>
+      <input type="date" id="itemDate" required>
+      <button type="submit">Add Item</button>
+    </form>
+
+    <div class="filter-section">
+      <label for="filterDate">Filter by Date:</label>
+      <input type="date" id="filterDate">
+      <button onclick="filterByDate()">Filter</button>
+      <button onclick="clearFilter()">Clear</button>
+    </div>
+
+    <table id="expenseTable">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Qty</th>
+          <th>Cost</th>
+          <th>Date</th>
+          <th>Total</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Items will be added here -->
+      </tbody>
+    </table>
+
+    <h3>Total Expense: ₹<span id="totalExpense">0</span></h3>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
